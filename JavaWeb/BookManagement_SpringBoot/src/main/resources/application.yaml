@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/library?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: n1425362023
+    password: Nsq142536
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+#mybatis-plus:
+#  global-config:
+#    db-config:
+#      id-type: assign_id

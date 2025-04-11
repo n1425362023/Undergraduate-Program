@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.bookmanagement_springboot.mapper.BookLoanRecordMapper">
+
+    <resultMap id="BaseResultMap" type="org.example.bookmanagement_springboot.entity.BookLoanRecord">
+            <id property="bookLoanRecordId" column="book_loan_record_id" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="VARCHAR"/>
+            <result property="bookId" column="book_id" jdbcType="VARCHAR"/>
+            <result property="loanDate" column="loan_date" jdbcType="DATE"/>
+            <result property="returnDate" column="return_date" jdbcType="DATE"/>
+            <result property="dueDate" column="due_date" jdbcType="DATE"/>
+            <result property="isOverdue" column="is_overdue" jdbcType="TINYINT"/>
+            <result property="is_deleted" column="is_deleted" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        bookLoanRecordId,userId,bookID,
+        loanDate,returnDate,dueDate,isOverdue,is_deleted
+    </sql>
+</mapper>
