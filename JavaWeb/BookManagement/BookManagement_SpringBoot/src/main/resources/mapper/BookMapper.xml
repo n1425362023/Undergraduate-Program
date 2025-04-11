@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.bookmanagement_springboot.mapper.BookMapper">
+
+    <resultMap id="BaseResultMap" type="org.example.bookmanagement_springboot.entity.Book">
+            <id property="bookId" column="book_id" jdbcType="VARCHAR"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="author" column="author" jdbcType="VARCHAR"/>
+            <result property="publisher" column="publisher" jdbcType="VARCHAR"/>
+            <result property="publishDate" column="publish_date" jdbcType="DATE"/>
+            <result property="isBorrowed" column="is_borrowed" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        bookId,title,author,
+        publisher,publishDate,isBorrowed
+    </sql>
+</mapper>
